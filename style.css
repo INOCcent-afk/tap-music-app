@@ -1,0 +1,85 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  overflow: hidden;
+}
+body {
+  font-family: sans-serif;
+  font-size: 40px;
+}
+
+.app {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  height: 100vh;
+  flex-direction: column;
+}
+
+.pads {
+  width: 100%;
+  display: flex;
+}
+.pad1,
+.pad2,
+.pad3,
+.pad4,
+.pad5,
+.pad6 {
+  width: 150px;
+  height: 200px;
+}
+.pads div {
+  flex: 1;
+}
+.pad1 {
+  background: #883c3c;
+}
+.pad2 {
+  background: #71883c;
+}
+.pad3 {
+  background: #3c8877;
+}
+.pad4 {
+  background: #3c3d88;
+}
+.pad5 {
+  background: #883c7e;
+}
+.pad6 {
+  background: #883c3c;
+}
+
+.visual div {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  position: absolute;
+  bottom: 0;
+  z-index: -1;
+}
+
+@keyframes jump {
+  0% {
+    bottom: 0%;
+    left: 20%;
+  }
+  50% {
+    bottom: 50%;
+    left: 50%;
+    opacity: 1;
+  }
+  100% {
+    bottom: 0%;
+    left: 80%;
+    transform: scale(5);
+    opacity: 0;
+  }
+}
